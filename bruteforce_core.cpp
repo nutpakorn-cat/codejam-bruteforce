@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-void todo(const int& task_count, vector<int> &recursive_value) {
+void todo(const int& task_count, std::vector<int> &recursive_value) {
   // TODO: this function gets called automatically for each iteration of brute-force loop.
 }
 
@@ -20,7 +19,7 @@ void todo(const int& task_count, vector<int> &recursive_value) {
 // If not the last: recursive with iterate k until it's the last
 // If it's the last: now you will get N nested loop, where N is task_count,
 //                   so it will call *f function that you have passed it through
-void RecursiveTask(const int& task_count, vector<int> &data_start, const int& k, vector<int> &data, vector<int> &recursive_value, void (*f)(const int& task_count, vector<int> &recursive_value)) {
+void RecursiveTask(const int& task_count, std::vector<int> &data_start, const int& k, std::vector<int> &data, std::vector<int> &recursive_value, void (*f)(const int& task_count, std::vector<int> &recursive_value)) {
   if (k >= task_count-1) {
     for (int i = data_start[k] ; i < data[k] ; ++i) {
       recursive_value[k] = i;
