@@ -6,7 +6,6 @@ void todo(const int& task_count, vector<int> &recursive_value) {
   // TODO: this function gets called automatically for each iteration of brute-force loop.
 }
 
-
 // RecursiveTask
 //
 // Variables
