@@ -1,3 +1,13 @@
+// Problem
+// We want to brute force 3 digits number
+// from 0 to 5 for each digit
+//
+// Expected output
+// 0 0 0
+// 0 0 1
+// ...
+// ...
+// 5 5 5
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -15,7 +25,17 @@ void todo(const int& task_count, vector<int> &recursive_value) {
 
 // Include from bruteforce_core.cpp
 // It's unnecessery to customize, Just a system core.
-void RecursiveTask(const int& task_count, vector<int> &data_start, const int& k, vector<int> &data, vector<int> &recursive_value, void (*f)(const int& task_count, vector<int> &recursive_value)) {
+void RecursiveTask(
+  const int& task_count, 
+  vector<int> &data_start, 
+  const int& k,
+  vector<int> &data, 
+  vector<int> &recursive_value, 
+  void (*f)(
+    const int& task_count, 
+    vector<int> &recursive_value
+  )
+) {
   if (k >= task_count-1) {
     for (int i = data_start[k] ; i <= data[k] ; ++i) {
       recursive_value[k] = i;
